@@ -168,7 +168,7 @@ namespace System.Reflection.Emit {
 			"ldelem",
 			"stelem",
 			"unbox.any",
-			null,
+			"ldc.i4.x",
 			null,
 			null,
 			null,

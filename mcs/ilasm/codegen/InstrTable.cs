@@ -306,6 +306,7 @@ namespace Mono.ILASM {
                         inst_table["switch"] = new ILToken (Token.INSTR_SWITCH, MiscInstr._switch);
                         inst_table["calli"] = new ILToken (Token.INSTR_SIG, MiscInstr.calli);
                         inst_table["ldtoken"] = new ILToken (Token.INSTR_TOK, MiscInstr.ldtoken);
+                        inst_table["ldc.i4.x"] = new ILToken (Token.INSTR_I, IntOp.ldc_i4_x);
                 }
 
         }

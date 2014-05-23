@@ -130,7 +130,7 @@ namespace PEAPI {
 	/// </summary>
 	public enum IntOp {ldarg_s = 0x0E, ldarga_s, starg_s, ldloc_s, ldloca_s, 
 		stloc_s, ldc_i4_s = 0x1F, ldc_i4, ldarg = 0xFE09,
-		ldarga, starg, ldloc, ldloca, stloc, unaligned = 0xFE12 }
+		ldarga, starg, ldloc, ldloca, stloc, unaligned = 0xFE12, ldc_i4_x = 0xFFA6}
 
 	/// <summary>
 	/// CIL instructions requiring a field parameter
