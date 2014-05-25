@@ -665,6 +665,10 @@ namespace System.Reflection.Emit {
 			0xFF << 0 | 0xA5 << 8 | (byte) StackBehaviour.Push1 << 16 | (byte) StackBehaviour.Popref << 24,
 			1 << 0 | (byte) OpCodeType.Objmodel << 8 | (byte) OperandType.InlineType << 16 | (byte) FlowControl.Next << 24);
 
+		public static readonly OpCode Ldc_I4_X = new OpCode (
+			0xFF << 0 | 0xA6 << 8 | (byte) StackBehaviour.Pushi << 16 | (byte) StackBehaviour.Pop0 << 24,
+			1 << 0 | (byte) OpCodeType.Primitive << 8 | (byte) OperandType.InlineI << 16 | (byte) FlowControl.Next << 24);
+
 		public static readonly OpCode Conv_Ovf_I1 = new OpCode (
 			0xFF << 0 | 0xB3 << 8 | (byte) StackBehaviour.Pushi << 16 | (byte) StackBehaviour.Pop1 << 24,
 			1 << 0 | (byte) OpCodeType.Primitive << 8 | (byte) OperandType.InlineNone << 16 | (byte) FlowControl.Next << 24);

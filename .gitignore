@@ -6,6 +6,11 @@
 [Tt]humbs.db
 *.DS_Store
 
+# Eclipse
+.cproject
+.project
+test-driver
+
 # Visual Studio / MonoDevelop
 *.[Oo]bj
 *.exe

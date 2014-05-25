@@ -832,6 +832,7 @@ generate(MonoMethod *method, RuntimeMethod *rtm, unsigned char *is_bb_start)
 			PUSH_TYPE(&td, STACK_TYPE_O, NULL);
 			break;
 		case CEE_LDC_I4_M1:
+printf("__FILE__:__LINE__")
 			SIMPLE_OP(td, MINT_LDC_I4_M1);
 			PUSH_SIMPLE_TYPE(&td, STACK_TYPE_I4);
 			break;
@@ -866,12 +867,14 @@ generate(MonoMethod *method, RuntimeMethod *rtm, unsigned char *is_bb_start)
 			PUSH_SIMPLE_TYPE(&td, STACK_TYPE_I4);
 			break;
 		case CEE_LDC_I4_S: 
+printf("__FILE__:__LINE__")
 			ADD_CODE(&td, MINT_LDC_I4_S);
 			ADD_CODE(&td, ((gint8 *) td.ip) [1]);
 			td.ip += 2;
 			PUSH_SIMPLE_TYPE(&td, STACK_TYPE_I4);
 			break;
 		case CEE_LDC_I4:
+printf("__FILE__:__LINE__")
 			i32 = read32 (td.ip + 1);
 			ADD_CODE(&td, MINT_LDC_I4);
 			WRITE32(&td, &i32);
@@ -879,6 +882,7 @@ generate(MonoMethod *method, RuntimeMethod *rtm, unsigned char *is_bb_start)
 			PUSH_SIMPLE_TYPE(&td, STACK_TYPE_I4);
 			break;
 		case CEE_LDC_I8: {
+printf("__FILE__:__LINE__")
 			gint64 val = read64 (td.ip + 1);
 			ADD_CODE(&td, MINT_LDC_I8);
 			WRITE64(&td, &val);
