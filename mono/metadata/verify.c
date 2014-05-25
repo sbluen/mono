@@ -5247,6 +5247,13 @@ mono_method_verify (MonoMethod *method, int level)
 			ip += 5;
 			break;
 
+		case CEE_LDC_I4_X:
+			code_bounds_check (5);
+			if (check_overflow (&ctx))
+				stack_push_val (&ctx,TYPE_I4, &mono_defaults.int32_class->byval_arg);
+			ip += 5;
+			break;
+
 		case CEE_LDC_I8:
 			code_bounds_check (9);
 			if (check_overflow (&ctx))

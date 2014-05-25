@@ -7627,6 +7627,13 @@ mono_method_to_ir (MonoCompile *cfg, MonoMethod *method, MonoBasicBlock *start_b
 			ip += 5;
 			*sp++ = ins;
 			break;
+		case CEE_LDC_I4_X:
+			CHECK_OPSIZE (5);
+			CHECK_STACK_OVF (1);
+			EMIT_NEW_ICONST (cfg, ins, (gint32)read32 (ip + 1));
+			ip += 5;
+			*sp++ = ins;
+			break;
 		case CEE_LDC_I8:
 			CHECK_OPSIZE (9);
 			CHECK_STACK_OVF (1);
