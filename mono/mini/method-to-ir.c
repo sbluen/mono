@@ -32,6 +32,7 @@
 #include <alloca.h>
 #endif
 
+#include <stdio.h>
 #include <mono/utils/memcheck.h>
 
 #include <mono/metadata/assembly.h>
@@ -7628,6 +7629,7 @@ mono_method_to_ir (MonoCompile *cfg, MonoMethod *method, MonoBasicBlock *start_b
 			*sp++ = ins;
 			break;
 		case CEE_LDC_I4_X:
+			printf("I4_X\n");
 			CHECK_OPSIZE (5);
 			CHECK_STACK_OVF (1);
 			EMIT_NEW_ICONST (cfg, ins, (gint32)read32 (ip + 1));
